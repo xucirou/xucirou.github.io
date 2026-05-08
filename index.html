@@ -386,6 +386,48 @@
             transform: translateY(0);
         }
 
+        /* --- 论文链接高级动效 --- */
+    .paper-link {
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-bottom: 2px;
+    display: inline-block;
+    }
+
+.paper-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.paper-link:hover {
+    color: var(--accent);
+}
+
+.paper-link:hover::after {
+    transform: scaleX(1);
+}
+
+.paper-link i {
+    margin-left: 4px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.paper-link:hover i {
+    transform: translateX(3px) translateY(-3px); /* 悬停时小图标向右上角微动 */
+}
+
     </style>
 </head>
 <body>
@@ -468,7 +510,7 @@
                 <div class="timeline-content">
                     <h3>张宇伦老师实验室</h3>
                     <p class="lab-exp-text">
-                        参与 LSGQuant: Layer-Sensitivity Guided Quantization (ICML 2026)，以及 Real-World Video Super-Resolution with One-Step Diffusion (IEEE TPAMI 在投) 的工作。
+                        参与 <a href="https://arxiv.org/abs/2602.03182" target="_blank" class="paper-link">LSGQuant: Layer-Sensitivity Guided Quantization <i class="fas fa-external-link-alt"></i></a> (ICML 2026)，以及 Real-World Video Super-Resolution with One-Step Diffusion (IEEE TPAMI 在投) 的工作。
                     </p>
                 </div>
             </div>
