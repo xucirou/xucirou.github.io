@@ -361,7 +361,7 @@
         .carousel-wrapper {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 500px;
             perspective: 1200px; /* 3D透视深度 */
             display: flex;
             justify-content: center;
@@ -381,8 +381,8 @@
 
         .carousel-item {
             position: absolute;
-            width: 320px;
-            height: 240px; /* 4:3比例 */
+            width: 480px;
+            height: 270px; /* 4:3比例 */
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -558,10 +558,10 @@
             .footer-contacts { flex-direction: column; gap: 10px; }
             
             /* 手机端 3D 画廊参数调整 */
-            .carousel-wrapper { height: 300px; }
-            .carousel-item { width: 220px; height: 165px; }
-            .carousel-item.prev { transform: translateX(-40%) scale(0.8) rotateY(30deg); }
-            .carousel-item.next { transform: translateX(40%) scale(0.8) rotateY(-30deg); }
+            .carousel-wrapper { height: 350px; }
+            .carousel-item { width: 320px; height: 180px; }
+            .carousel-item.prev { transform: translateX(-45%) scale(0.75) rotateY(30deg); }
+            .carousel-item.next { transform: translateX(45%) scale(0.75) rotateY(-30deg); }
             .btn-left { left: 0px; }
             .btn-right { right: 0px; }
         }
@@ -738,7 +738,7 @@
                 </div>
 
                 <div class="carousel-item" onclick="jumpToSlide(2)">
-                    <video src="hobby-video.mp4" autoplay loop muted playsinline></video>
+                    <video src="https://mrc-xcr.oss-cn-shanghai.aliyuncs.com/hobby-video.mp4" autoplay loop muted playsinline></video>
                 </div>
 
             </div>
